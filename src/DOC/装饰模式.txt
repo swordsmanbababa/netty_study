@@ -1,0 +1,12 @@
+装饰模式角色：
+
+抽象构建角色（component）：给出一个抽象接口，以规范准备接收附加责任的对象
+eg：IO中的InputStream顶层抽象接口抽象接口
+具体构建角色（concrete component）：定义一个要接收附加责任的类
+eg：继承自InputStream如FileInputStream等子类
+装饰角色：（Decorator）：持有一个构建对象（component）的引用，并定义一个与构建对象一致的接口
+eg：过滤流抽象类FilterInputStream抽象类
+具体装饰角色：（concrete decorator）：负责给构建对象"贴上"具体的责任
+eg：继承自FilterInputStream的具体过滤流
+
+装饰类要实现抽象接口，并持有接口的引用来接受具体子类对象

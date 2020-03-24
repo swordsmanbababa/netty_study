@@ -1,0 +1,29 @@
+java.io  核心概念：流 面向流编程
+java.nio 面向块（block）或者是缓冲区（buffer）编程的
+buffer本身是一块内存，底层实现上实际是一块数组，数据的读写是通过buffer实现的
+   核心概念：
+    Selector
+    Channel
+    Buffer
+
+Channel是指可以向其中写入数据或者从中读取数据的对象，它类似与java.io中的Stream
+
+所有数据的读写都是通过buffer来进行的，永远不会出现向Channel写入数据的情况
+
+与Stream不同 channel是双向的
+
+关于NIO中buffer的三个属性：
+position ：下一个将要去读的元素的索引  非负 不大于limit
+limit：第一个不应该去被读写的元素的索引  非负数 不大于capacity
+capacity:容量  非负数 固定不会变化
+
+相对操作不变索引
+绝对操作改变索引
+
+0<=mark<=position<=limiy<=position
+
+buffer并非线程安全的
+
+空间初始化为0
+
+底层new int[hap]

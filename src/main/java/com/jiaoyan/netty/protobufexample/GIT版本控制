@@ -1,0 +1,20 @@
+使用git作为版本控制系统：
+
+git submodule:git仓库里的一个仓库
+
+ServerProject:
+CLientPriject:
+data.protoc
+ submodule Protocbufbuf-Java
+
+ 客户端 服务端同引用    Protocbufbuf-Java
+
+ branch:
+    develop
+    test
+    master
+
+merge
+
+
+git subtree

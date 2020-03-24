@@ -1,0 +1,30 @@
+//IO网络编程
+//服务端
+ServerSocket serverSocker=....
+serverSocker.bind()
+
+while(true){
+Socket socket=serverSocket.accept()//阻塞方法
+    //为了不在当前线程线程中执行IO，使程序快速进入下一次循环 继续监听状态
+    new Thread(socket);
+    run(){
+        socket.getInputStream()
+        ...
+        ...
+        ...
+    }
+}
+//客户端
+Socket socket=new Socket("localhost",8899)
+socket.connect();
+
+
+<key set>
+channel  的 register方法注册key
+在selection option中移除key
+
+<canneled key>
+该集合中的key会在下一次select option中从selected key中移除
+
+<selected key>
+keys通过selection操作加入到selected key中
